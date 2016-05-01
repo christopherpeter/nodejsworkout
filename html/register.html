@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="body-full-height">
+    <head>        
+        <!-- META SECTION -->
+        <title>Tychons Admin - Responsive Bootstrap Admin Template</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <!-- EOF CSS INCLUDE -->                                    
+    </head>
+    <body>
+        <div class="login-container">
+        
+            <div class="login-box animated fadeInDown">
+                <div class="login-logo"></div>
+                <div class="login-body">
+                    <div class="login-title"><strong>Welcome</strong>, Please create an account</div>
+                    <form id="jvalidate" action="javascript:register()" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" id="username" name="username" class="form-control" autocomplete="off" placeholder="Username"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" id="email" name="email" class="form-control" autocomplete="off" placeholder="EmailId"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" id="password" name="password" autocomplete="off" class="form-control" placeholder="Password"/>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" id="repassword" name="repassword" autocomplete="off" class="form-control" placeholder="Password"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <a href="login.html" class="btn btn-link btn-block">login</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button id="register" class="btn btn-info btn-block">Register</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="pull-left">
+                        &copy; 2016 tychons admin
+                    </div>
+                    <div class="pull-right">
+                        <a href="#">About</a> |
+                        <a href="#">Privacy</a> |
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    <!-- include the scripts -->
+    <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <!-- END PLUGINS -->
+    <script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>
+    <script src="js/app.js"></script>
+            <script type="text/javascript">
+            var jvalidate = $("#jvalidate").validate({
+                ignore: [],
+                rules: {                                            
+                        username: {
+                                required: true
+                        },
+                        password: {
+                                required: true
+                        },
+                        'repassword': {
+                                required: true,
+                                equalTo: "#password"
+                        },
+                        email: {
+                                required: true,
+                                email: true
+                        }
+                    }                                        
+                });                                    
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
